@@ -7,8 +7,8 @@
     "test": "jest --watchAll --verbose",
     "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Express", "MongoDB", "NodeJS", "API"],
+  "author": "Lazar Jankovic",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^1.0.3",
