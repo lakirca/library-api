@@ -49,7 +49,7 @@ router.post('/', auth, async (req, res) => {
     },
     numberInStock: req.body.numberInStock,
     rentalRate: req.body.rentalRate,
-    price: req.body.price
+    rentalPrice: req.body.rentalPrice
   });
   await book.save();
   
@@ -83,7 +83,7 @@ router.put('/:id', auth, async (req, res) => {
       },
       numberInStock: req.body.numberInStock,
       rentalRate: req.body.rentalRate,
-      price: req.body.price
+      rentalPrice: req.body.rentalPrice
     }, { new: true });
 
   if (!book) return res.status(404).send('The book with the given ID was not found.');

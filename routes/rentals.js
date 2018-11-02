@@ -35,7 +35,8 @@ router.post('/', async (req, res) => {
       _id: book._id,
       title: book.title,
       rentalRate: book.rentalRate
-    }
+    },
+    rentalFee: book.rentalPrice + 5 // Add 5 to book rentalPrice
   });
 
   try {

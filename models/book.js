@@ -23,7 +23,7 @@ const Book = mongoose.model('Books', new mongoose.Schema({
     type: genreSchema,  
     required: true
   },
-  price: {
+  rentalPrice: {
     type: Number,
     required: true
   },
@@ -48,7 +48,7 @@ function validateBook(book) {
     genreId: Joi.objectId().required(),
     authorId: Joi.objectId().required(),
     numberInStock: Joi.number().min(0).required(),
-    price: Joi.number().min(1).required(),
+    rentalPrice: Joi.number().min(1).required(),
     rentalRate: Joi.number().min(0).required()
   };
 
