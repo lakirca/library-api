@@ -27,7 +27,6 @@ router.post('/', auth, async (req, res) => {
 
   let customer = new Customer({ 
     name: req.body.name,
-    isGold: req.body.isGold,
     phone: req.body.phone,
     card: req.body.card
   });
@@ -44,8 +43,7 @@ router.put('/:id', [auth, admin], async (req, res) => {
   const customer = await Customer.findByIdAndUpdate(req.params.id,
     { 
       name: req.body.name,
-      isGold: req.body.isGold,
-      phone: req.body.phone,
+        phone: req.body.phone,
       card: req.body.card
     }, { new: true });
 

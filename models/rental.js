@@ -11,10 +11,6 @@ const rentalSchema = new mongoose.Schema({
         minlength: 3,
         maxlength: 50
       },
-      isGold: {
-        type: Boolean,
-        default: false
-      },
       phone: {
         type: String,
         required: true,
